@@ -56,6 +56,7 @@
   set_lr = 1e-4
   ```
   파라미터를 원한다면 수정을 하고 전체 통째로 실행하면 알아서 학습을 하고 Score 기록 (F1-micro, F1-macro, Accuracy, Balance Accuracy)         
+  실행시 입력파일 경로 자신의 경로에 맞게 수정할 것!     
   
   ### MultiModel ( RoBERTa + Wav2Vec) 사용시      
   baseline(text+audio).ipynb -> 베이스라인 모델        
@@ -81,7 +82,8 @@
   set_lr = 1e-4
   ```
   
-  둘 다 RoBERTa_2-fold.ipynb 와 실행 방식이 동일: 파라미터 필요시 수정 후 통째로 실행        
+  둘 다 RoBERTa_2-fold.ipynb 와 실행 방식이 동일: 파라미터 필요시 수정 후 통째로 실행      
+  실행시 입력파일 경로 자신의 경로에 맞게 수정할 것!    
   권장 사양: 해당 모델은 RTX3090 2개를 Data Parallel을 통해 훈련하였고, 위에 적힌 값이 사용한 파라미터입니다. 따라서 더 작은 사양에서는 batchsize나 max_len을 줄여서 사용하는게 좋습니다
  
       
