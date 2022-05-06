@@ -67,7 +67,7 @@
   model_name = 'klue/roberta-base'
   BATCH_SIZE =64
   MAX_LEN =256
-  EPOCHS = 30
+  EPOCHS = 20
   set_lr = 1e-4
   ```
   ```python
@@ -77,7 +77,7 @@
   BATCH_SIZE =64
   MAX_LEN =196
   MAX_WV_LEN = 4 * 16000
-  EPOCHS = 30
+  EPOCHS = 20
   set_lr = 1e-4
   ```
   
