@@ -1,19 +1,22 @@
 # -ETRI-Emotion-Recognition
 
-### 사용한 라이브러리 DownloadList.ipynb 를 실행시켜 일괄 다운로드 가능
+### 사용한 라이브러리 DownloadList.ipynb 를 실행시켜 일괄 다운로드 가능  
+  
+  
 
-### 데이터 전처리 과정 및 결과 -> prepare_data.py 참조
-  과정
+## 데이터 전처리 과정 및 결과 -> prepare_data.py 참조
+  #### 과정
   1. 오탈자 확인 Sess12,Sess17,disqust 등
   2. 평가자별 가중치 세우기: 이는 과반수의 사람이 동일한 라벨로 평가한 데이터를 얼마나 많이 똑같이 평가했냐 Accuracy를 통해 계산 
-  3. 평가자별 가중치를 곱하여 Total Evaluation을 재계산한다 -> 가중치가 소수이기 때문에 웬만해서는 동일 점수가 나오기 힘들어 Total Evaluation의 중복라벨들이 전부 제거되었다 
-  이를 new_data.csv로 저장
+  3. 평가자별 가중치를 곱하여 Total Evaluation을 재계산한다 
+  #### 결과
+  가중치가 소수이기 때문에 웬만해서는 동일 점수가 나오기 힘들어 Total Evaluation의 중복라벨들이 전부 제거되었다. 이를 new_data.csv로 저장
   
   
-### 코드 실행방식에 대한 설명
+## 코드 실행방식에 대한 설명
   1. 우선 DownloadList.ipynb 를 실행시켜 라이브러리를 다운받음
   2. prepare_data.py를 실행시켜 사용하는 데이터셋인 new_data.csv 생성
-  #### RoBERTa 모델 사용시 
+  ### RoBERTa 모델 사용시 
   1. RoBERTa 파일 경로에 들어가 
   train.py 실행 -> Base model / train_multilabel.py 실행 -> 불균형을 해결을 위한 Loss 함수 이용
   밑에 인자 값에 맞추어 실행
@@ -54,7 +57,7 @@
   ```
   에 파라미터를 수정하여 전체 실행하면 알아서 학습을 하고 Score 기록 (F1-micro, F1-macro, Accuracy, Balance Accuracy)
   
-  #### MultiModel ( RoBERTa + Wav2Vec) 사용시 
+  ### MultiModel ( RoBERTa + Wav2Vec) 사용시 
   baseline(text+audio).ipynb -> 베이스라인 모델
   multimodel_2fold.ipynb -> 2겹의 모델 방식을 멀티모델에 적용한 것 
   
