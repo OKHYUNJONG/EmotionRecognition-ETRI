@@ -19,7 +19,7 @@
   ### RoBERTa 모델 사용시 
   1. RoBERTa 파일 경로에 들어가 
   train.py 실행 -> Base model / train_multilabel.py 실행 -> 불균형을 해결을 위한 Loss 함수 이용
-  밑에 인자 값에 맞추어 실행
+  -> 밑에 인자 값에 맞추어 실행
       
   ```python
   def parse_args():
@@ -82,6 +82,7 @@
   ```
   
   둘 다 RoBERTa_2-fold.ipynb 와 실행 방식이 동일: 파라미터 입력후 통째로 실행
+  권장 사양: 해당 모델은 RTX3090 2개를 Data Parallel을 통해 훈련하였고, 위에 적힌 값이 사용한 파라미터입니다. 따라서 더 작은 사양에서는 batchsize나 max_len을 줄여서 사용하는게 좋습니다
  
       
       
