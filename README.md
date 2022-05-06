@@ -1,8 +1,8 @@
 # -ETRI-Emotion-Recognition
 
-### 사용한 라이브러리 DownloadList.ipynb 를 실행시켜 일괄 다운로드 가능  
-  
-  
+### 사용한 라이브러리 DownloadList.ipynb 를 실행시켜 일괄 다운로드 가능         
+           
+             
 
 ## 데이터 전처리 과정 및 결과 -> prepare_data.py 참조
   #### 과정
@@ -40,7 +40,7 @@
   ```
   python train.py --fold 0 
   ```
-  권장 사양: 해당 모델은 RTX3090을 통해 훈련하였고, default값이 사용한 파라미터입니다. 따라서 더 작은 사양에서는 batchsize나 max_len을 줄여서 사용하는게 좋습니다
+  권장 사양: 해당 모델은 RTX3090을 통해 훈련하였고, default값이 사용한 파라미터입니다. 따라서 더 작은 사양에서는 batchsize나 max_len을 줄여서 사용하는게 좋습니다      
   ``` 예시
   python train.py --fold 0 --batch_size 16 max_len 128
   ```
@@ -55,11 +55,11 @@
   EPOCHS = 30
   set_lr = 1e-4
   ```
-  에 파라미터를 수정하여 전체 실행하면 알아서 학습을 하고 Score 기록 (F1-micro, F1-macro, Accuracy, Balance Accuracy)
+  파라미터를 원한다면 수정을 하고 전체 통째로 실행하면 알아서 학습을 하고 Score 기록 (F1-micro, F1-macro, Accuracy, Balance Accuracy)         
   
-  ### MultiModel ( RoBERTa + Wav2Vec) 사용시 
-  baseline(text+audio).ipynb -> 베이스라인 모델
-  multimodel_2fold.ipynb -> 2겹의 모델 방식을 멀티모델에 적용한 것 
+  ### MultiModel ( RoBERTa + Wav2Vec) 사용시      
+  baseline(text+audio).ipynb -> 베이스라인 모델        
+  multimodel_2fold.ipynb -> 2겹의 모델 방식을 멀티모델에 적용한 것      
   
   ```python
   #Check Parameters
@@ -81,7 +81,7 @@
   set_lr = 1e-4
   ```
   
-  둘 다 RoBERTa_2-fold.ipynb 와 실행 방식이 동일: 파라미터 입력후 통째로 실행
+  둘 다 RoBERTa_2-fold.ipynb 와 실행 방식이 동일: 파라미터 필요시 수정 후 통째로 실행        
   권장 사양: 해당 모델은 RTX3090 2개를 Data Parallel을 통해 훈련하였고, 위에 적힌 값이 사용한 파라미터입니다. 따라서 더 작은 사양에서는 batchsize나 max_len을 줄여서 사용하는게 좋습니다
  
       
